@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    background-color: #101015;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* Tmavý filtr přes pozadí */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+/* Hlavní nadpis */
+h1 {
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 0 0 40px;
+}
+
+/* Hlavní kontejner */
+body > div {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(25, 25, 30, 0.75);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Seznam skladeb */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px;
+}
+
+li {
+    padding: 22px;
+    margin-bottom: 14px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-3px);
+}
+
+/* Název skladby */
+li p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 15px;
+    color: #c8c8d0;
+}
+
+li strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Audio přehrávač */
+audio {
+    display: block;
+    width: 100%;
+    height: 45px;
+    border-radius: 12px;
+}
+
+/* YouTube video */
+iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    border-radius: 16px;
+}
+
+/* Tlačítko zpět */
+body > a {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 32px;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+body > a:hover {
+    background: #fff;
+    color: #111;
+    transform: translateY(-2px);
+}
